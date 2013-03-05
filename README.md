@@ -1,6 +1,8 @@
 Insects Awaken
 =============
 
+A blog based on Node and Mongodb
+
 惊蛰
 =============
 
