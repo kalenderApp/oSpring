@@ -31,43 +31,35 @@ body {
 header {
 	height:300px;
 	width:600px;
-	background:#2F2D37 url(../images/header_bg.jpg) no-repeat;
 	background:#2F2D37 url(../images/top_bg.png) no-repeat;
 	margin:0 auto;
-	
 	display:block;
 	position:relative;
 }
-#avatar {
-	padding-top: 60px;
-	position: relative;
-	top:0px;
-	left:0px;
+header h1 {
+	width: 600px;
+	display: inline-block;
+	margin-top: 50px;
 }
-
-header footer {
-	position: relative;
-	margin: 0 auto;
-	z-index: 0;
-	margin-top: 130px;
-	text-align: center;
-	color: #7E6154;
-}
-header footer h3 {
-	color:#B89E94;
+header h3, header h1 a {
+	color:#FFF;
 }
 
 /*头部文字*/
-header h1 a {
+header h1 a, header h1 a:visited, header h3 {
 	letter-spacing: 5px;
 	font-size: 32px;
 	text-align: center;
 	margin:40px 0 5px;
 	text-decoration: none;
 	display: block;
-	color:#DACCC7;
+	color:#FFF;
 }
-
+header h3 {
+	font-size:14px;
+	letter-spacing: 0px;
+	margin:10px 0;
+}
 .coverbg {
 	width: 136px;
 	height: 136px;
