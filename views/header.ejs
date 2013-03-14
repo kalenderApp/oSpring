@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title></title>
+  <link type="text/css" rel="stylesheet" href="/stylesheets/style.css">
+  <!--[if lte IE 8]> 
+    <script type="text/javascript" src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+  <!--[if lte IE 7]>
+    <link rel="stylesheet" href="/stylesheets/kill-ie6.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="/javascripts/kill-ie6.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="/javascripts/jquery-1.9.0.js"></script>
+</head>
+<body>
+  <header id="header">
+    <h1><a href="/" title="一米"><%= config.title %></a></h1>
+    <h3><%= config.description %></h3>
+    <nav>
+      <ul>
+        <li class="cat-item cat-item-816"><a href="#" title="查看 项目 下的所有文章">项目</a></li>
+	      <li class="cat-item cat-item-820"><a href="#" title="查看 情感 下的所有文章">情感</a></li>
+	      <li class="cat-item cat-item-1"><a href="#" title="查看 繁乱 下的所有文章">繁乱</a></li>
+        <li class="page_item page-item-2078"><a href="#">关于</a></li>
+      </ul>
+      <form onsubmit='javascript:if($("#searchbox").val() == ""){alert("请输入关键字！");return false}' id="search" action="" method="get">
+          <input type="text" id="searchbox" name="s" value=""><input type="submit" id="submitsearch" value="搜">
+      </form>
+    </nav>
+    <% if(!session) { %>
+    <span id="member"><a href="/register">注册</a><a href="/login">登陆</a></span>
+    <% } else { %>
+    <span id="member"><a href="/ucenter">用户中心</a><a href="/logout">退出</a></span>
+    <% } %>
+  </header>
+
+  <div id="bar">
+    <div class="green"></div>
+    <div class="ltergreen"></div>
+    <div class="yellow"></div>
+    <div class="deepred"></div>
+    <div class="red"></div>
+  </div>
+ 

@@ -1,0 +1,21 @@
+<% include header %>
+	<link type="text/css" rel="stylesheet" href="/stylesheets/member.css">
+	<form class="content" id="formmember" action="/register">
+			<label>用户名：
+				<input type="text" name="username" class="text">
+			</label>
+			<label>邮&nbsp;&nbsp;&nbsp;件：
+				<input type="text" name="email" class="text">
+			</label>
+			<label>密&nbsp;&nbsp;&nbsp;码：
+				<input type="text" name="password" class="text">
+			</label>
+			<label>密&nbsp;&nbsp;&nbsp;码：
+				<input type="text" name="repassword" class="text">
+			</label>
+			<input type="hidden" name="power" value="1">
+			<input type="hidden" name="status" value="0">
+			<input type="submit" id="register" value="注  册">
+	</form>
+	<script type="text/javascript" src="/javascripts/member.js"></script>
+<% include footer %>
