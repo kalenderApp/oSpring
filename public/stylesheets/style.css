@@ -172,6 +172,7 @@ section {
 	width:700px;
 	padding:30px 30px 0 30px;
 	background:#FFF;
+  overflow:hidden;
 }
 section article {
 	padding:0 0 30px 0;

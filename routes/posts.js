@@ -1,8 +1,9 @@
-exports.index = function(req, res,app){
-	if (app.locals.config.title) {
-		res.render('index', app.locals.config);
-	} else {
-		res.redirect("/install");
-	};
-  
+var mposts = require("../models/mposts.js");
+
+exports.index = function(req, res, app){
+  mposts.getPosts(function(err, result){
+  if (!err && result.length > 0) {
+
+  }
+  });
 };

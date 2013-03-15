@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>oSpring 安装</title>
-	<link type="text/css" rel="stylesheet" href="/stylesheets/install.css">
-	<script type="text/javascript" src="/javascripts/jquery-1.9.0.js"></script>
+  <meta charset="UTF-8">
+  <title>oSpring 安装</title>
+  <link type="text/css" rel="stylesheet" href="/stylesheets/install.css">
+  <script type="text/javascript" src="/javascripts/jquery-1.9.0.js"></script>
 </head>
 <body>
-	<div id="step">
-		<div class="step cur">填写数据库信息</div><div class="step">网站设置</div><div class="step">管理员设置</div><div class="step">完成</div>
-	</div>
-	<div id="wp">
-		<div class="content">
-			<span>请打开 configuration.js 填写相应数据库信息！完成之后，请点击 下一步 继续！</span>
-			<input type="submit" id="next" value="下一步">
-		</div>
-		<form class="content" id="blogconfig">
-			<label>站点名称：
-				<input type="text" name="title" class="text">
-			</label>
-			<label>站点描述：
-				<input type="text" name="description" class="text">
-			</label>
-				<input type="hidden" name="canregister" value="0">
-				<input type="hidden" name="role" value="3">
-				<input type="submit" id="config" value="下一步">
-		</form>
-		<form class="content" id="adminregister">
-			<label>用户名：
-				<input type="text" name="username" class="text">
-			</label>
-			<label>邮&nbsp;&nbsp;&nbsp;件：
-				<input type="text" name="email" class="text">
-			</label>
-			<label>密&nbsp;&nbsp;&nbsp;码：
-				<input type="text" name="password" class="text">
-			</label>
-			<label>密&nbsp;&nbsp;&nbsp;码：
-				<input type="text" name="repassword" class="text">
-			</label>
-				<input type="hidden" name="power" value="1">
-				<input type="hidden" name="status" value="0">
-				<input type="submit" id="register" value="下一步">
-		</form>
-		<div class="content">
-			<span>安装成功，请重新启动 oSpring 博客服务！</span>
-			<input type="button" id="complete" value="访 问">
-		</div>
-	</div>
-	<div id="description">
-		! 安装完成后请删除此目录或更改此目录名称！
-	</div>
-	<script type="text/javascript" src="/javascripts/install.js?v=1"></script>
-	<script type="text/javascript">
-		
-	</script>
+  <div id="step">
+    <div class="step cur">填写数据库信息</div><div class="step">网站设置</div><div class="step">管理员设置</div><div class="step">完成</div>
+  </div>
+  <div id="wp">
+    <div class="content">
+      <span>请打开 configure.js 填写相应数据库信息！完成之后，请点击 下一步 继续！</span>
+      <input type="submit" id="next" value="下一步">
+    </div>
+    <form class="content" id="blogconfig">
+      <label>站点名称：
+        <input type="text" name="title" class="text">
+      </label>
+      <label>站点描述：
+        <input type="text" name="description" class="text">
+      </label>
+        <input type="hidden" name="canregister" value="0">
+        <input type="hidden" name="role" value="3">
+        <input type="submit" id="config" value="下一步">
+    </form>
+    <form class="content" id="adminregister">
+      <label>用户名：
+        <input type="text" name="username" class="text">
+      </label>
+      <label>邮&nbsp;&nbsp;&nbsp;件：
+        <input type="text" name="email" class="text">
+      </label>
+      <label>密&nbsp;&nbsp;&nbsp;码：
+        <input type="text" name="password" class="text">
+      </label>
+      <label>密&nbsp;&nbsp;&nbsp;码：
+        <input type="text" name="repassword" class="text">
+      </label>
+        <input type="hidden" name="power" value="1">
+        <input type="hidden" name="status" value="0">
+        <input type="submit" id="register" value="下一步">
+    </form>
+    <div class="content">
+      <span>安装成功，请重新启动 oSpring 博客服务！</span>
+      <input type="button" id="complete" value="访 问">
+    </div>
+  </div>
+  <div id="description">
+    ! 安装完成后请删除此目录或更改此目录名称！
+  </div>
+  <script type="text/javascript" src="/javascripts/install.js?v=1"></script>
+  <script type="text/javascript">
+
+  </script>
 </body>
 </html>

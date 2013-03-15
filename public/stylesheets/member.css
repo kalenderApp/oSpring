@@ -1,42 +1,46 @@
 #formmember {
-	text-align:right;
-	float: right;
-	height: 260px;
-	padding-top: 30px;
-	padding-right:7px;
-	background:#FFF;
-	position: static;
+  text-align: right;
+  float: right;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  background: RGBA(255,255,255,0.6);;
+  position: static;
+  border-left: 2px solid #CCC;
 }
 #formmember span {
-	color: red;
-	font-size: 24px;
-	text-align:center;
-	display:inline-block;
-	margin-bottom:30px;
+  color: red;
+  font-size: 24px;
+  text-align:center;
+  display:inline-block;
+  margin-bottom:30px;
 }
 label {
-	width:320px;
-	display:block;
-	margin:0 auto 15px auto;
-	margin:0 0 15px 0;
+  width:350px;
+  display:block;
+  margin:0 auto 15px auto;
+  margin:0 0 15px 0;
 }
 .text {
-	display:inline;
-	width: 200px;
-	height: 30px;
-	margin:0;
-	border: 2px inset;
+  display:inline;
+  width: 200px;
+  height: 30px;
+  margin:0;
+  border: 2px inset;
 }
 
 #login, #register {
-	width:180px;
-	height:40px;
-	border:none;
-	background:#08C;
-	color:#FFF;
-	cursor:pointer;
-	margin-top:5px;
-	display:block;
-	float: right;
-	margin-right:23px;
+  width:180px;
+  height:40px;
+  border:none;
+  background:#08C;
+  color:#FFF;
+  cursor:pointer;
+  margin-top:5px;
+  display:block;
+  float: right;
+  margin-right:23px;
+}
+
+#resisterform {
+  //background:url(../imagefs/register.png) no-repeat;
 }

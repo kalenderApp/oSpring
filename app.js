@@ -36,7 +36,31 @@ app.configure('development', function(){
 
 // 首页
 app.get('/',function(req, res){
-  posts.index(req, res, app);
+  console.log(req.params);
+  if (app.locals.config.title) {
+    posts.index(req, res, app);
+  } else {
+    res.redirect("/install");
+  }
+})
+
+app.get('/pages/',function(req, res){
+  console.log(req.params);
+  if (app.locals.config.title) {
+    posts.index(req, res, app);
+  } else {
+    res.redirect("/install");
+  }
+})
+
+app.get('/pages/:page',function(req, res){
+  console.log(req.params);
+  if (app.locals.config.title) {
+    posts.index(req, res, app);
+  } else {
+    res.redirect("/install");
+  }
+
   //isLogin(app,req,res,posts.index,posts.index)
 });
 app.get('/logout',function(req, res){
