@@ -36,14 +36,14 @@ app.configure('development', function(){
 
 // 首页
 app.get('/',function(req, res){
-  console.log(req.params);
   if (app.locals.config.title) {
     posts.index(req, res, app);
   } else {
     res.redirect("/install");
   }
-})
+});
 
+// 页面 如果没有输入页码 是否和输入页码合并？
 app.get('/pages/',function(req, res){
   console.log(req.params);
   if (app.locals.config.title) {
@@ -51,47 +51,44 @@ app.get('/pages/',function(req, res){
   } else {
     res.redirect("/install");
   }
-})
+});
 
-app.get('/pages/:page',function(req, res){
+// 页面 如果有输入页码 是否和未输入页码合并？
+app.get('/pages/:page?',function(req, res){
   console.log(req.params);
   if (app.locals.config.title) {
     posts.index(req, res, app);
   } else {
     res.redirect("/install");
   }
-
-  //isLogin(app,req,res,posts.index,posts.index)
 });
+
+// 登出
 app.get('/logout',function(req, res){
     req.session.users = null;
     app.locals.session = false;
-    //posts.index(req, res, app);
     res.redirect("/");
-    //isLogin(app,req,res,posts.index,posts.index)
 });
-//app.get('/users', users.getUser);
 
 // 注册页面
 app.get('/register',function(req,res){
-  //users.getRPage(req,res);
   isLogin(app,req,res,function(){res.redirect("/")},users.getRPage)
 })
+
 // 注册
 app.post('/register',function(req,res){
-  //users.register(app,req,res);
   isLogin(app,req,res,function(req,res){
           res.send({"code":0,"msg":"请退出登陆后注册！"});return
     },users.register)
 })
+
 // 登陆页面
 app.get('/login',function(req,res){
-  //users.getLPage(req,res);
   isLogin(app,req,res,function(){res.redirect("/")},users.getLPage)
 });
+
 // 登陆
 app.post('/login',function(req,res){
-  //users.login(req,res,app);
   isLogin(app,req,res,function(req,res){
             res.send('{"code":0,"msg":"重复登录！"}');return
     },users.login);
@@ -101,8 +98,9 @@ app.post('/login',function(req,res){
 app.post('/config',function(req,res){config.saveConfig(req,res)});
 app.post('/admin',function(req,res){users.register(app,req,res)});
 
-//app.get('/404', system.notFound);
-//app.get('/500', system.error);
+// 错误页面自定义
+app.get('/404', config.notFound);
+app.get('/500', config.error);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

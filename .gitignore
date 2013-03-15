@@ -15,7 +15,9 @@ local.properties
 .classpath
 .settings/
 .loadpath
-
+#############################
+public/temp/
+#############################
 # External tool builders
 .externalToolBuilders/
 
